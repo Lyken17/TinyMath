@@ -1,0 +1,3 @@
+/Users/lykensyu/ClionProjects/TinyMath/CMakeFiles/edit_cache.dir
+/Users/lykensyu/ClionProjects/TinyMath/CMakeFiles/rebuild_cache.dir
+/Users/lykensyu/ClionProjects/TinyMath/CMakeFiles/TinyMath.dir

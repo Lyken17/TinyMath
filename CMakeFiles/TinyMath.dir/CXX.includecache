@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/lykensyu/ClionProjects/TinyMath/TinyVector.cpp
+TinyVector.h
+/Users/lykensyu/ClionProjects/TinyMath/TinyVector.h
+
+/Users/lykensyu/ClionProjects/TinyMath/TinyVector.h
+
+/Users/lykensyu/ClionProjects/TinyMath/main.cpp
+iostream
+-
+TinyVector.h
+/Users/lykensyu/ClionProjects/TinyMath/TinyVector.h
+
