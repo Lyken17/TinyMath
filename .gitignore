@@ -1,6 +1,6 @@
 # Clion file
 CMakeFiles/*
-idea/*
+.idea/*
 
 # cmake file
 CMakeCache.txt
