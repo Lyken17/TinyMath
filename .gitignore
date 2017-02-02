@@ -1,6 +1,6 @@
 # Clion file
-./CMakeFiles/*
-./idea/*
+CMakeFiles/*
+idea/*
 
 # Prerequisites
 *.d
