@@ -2,6 +2,11 @@
 CMakeFiles/*
 idea/*
 
+# cmake file
+CMakeCache.txt
+CMakeLists.txt
+cmake_install.cmake
+
 # Prerequisites
 *.d
 
