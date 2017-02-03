@@ -1,7 +1,6 @@
 #include <iostream>
 
-#include "TinyVector.h"
-#include "TinyVector.cpp"
+#include "TinyVector"
 
 using namespace std;
 

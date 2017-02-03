@@ -1,0 +1,87 @@
+//
+// Created by Lyken Syu on 2/1/17.
+//
+
+#ifndef TINYMATH_TINYVECTOR_H
+#define TINYMATH_TINYVECTOR_H
+#include <iostream>
+
+template <class dtype, int size>
+class TinyVector {
+public:
+    dtype darray[size];
+    TinyVector() {
+        for(int i = 0; i < size; ++i)
+            darray[i] = 0;
+    }
+
+
+    TinyVector& operator+=(const TinyVector& rhs) {
+        for (int i = 0; i < size; ++i)
+            this->darray[i] += rhs.darray[i];
+        return *this;
+    }
+
+    friend TinyVector operator+ (TinyVector lhs, TinyVector rhs) {
+        lhs += rhs;
+        return lhs;
+    }
+
+    TinyVector& operator-=(const TinyVector& rhs) {
+        for (int i = 0; i < size; ++i)
+            this->darray[i] -= rhs.darray[i];
+        return *this;
+    }
+
+    friend TinyVector operator- (TinyVector lhs, TinyVector rhs) {
+        lhs -= rhs;
+        return lhs;
+    }
+
+    TinyVector& operator*=(double scale) {
+        for (int i = 0; i < size; ++i)
+            this->darray[i] *= scale;
+        return *this;
+    }
+
+    friend TinyVector operator* (TinyVector lhs, double scale) {
+        lhs *= scale;
+        return lhs;
+    }
+
+    friend TinyVector operator* (double scale, TinyVector rhs) {
+        rhs *= scale;
+        return rhs;
+    }
+
+    // dot production
+    friend dtype operator* (const TinyVector &lhs, const TinyVector &rhs) {
+        dtype res = 0.0;
+        for(int i = 0; i < size; ++i)
+            res += lhs.darray[i] * rhs.darray[i];
+        return res;
+    }
+
+    TinyVector& operator/=(double scale) {
+        for (int i = 0; i < size; ++i)
+            this->darray[i] /= scale;
+        return *this;
+    }
+
+    friend TinyVector operator/ (TinyVector lhs, double scale) {
+        lhs /= scale;
+        return lhs;
+    }
+
+    std::ostream& operator<<(std::ostream& os, const TinyVector& obj)
+    {
+        os << " [ ";
+        for (int i = 0; i < size; ++i)
+            os << obj.darray[i] << " ";
+        os << "] " << std::endl;
+        return os;
+    }
+};
+
+
+#endif //TINYMATH_TINYVECTOR_H
