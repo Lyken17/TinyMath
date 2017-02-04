@@ -73,7 +73,7 @@ public:
         return lhs;
     }
 
-    std::ostream& operator<<(std::ostream& os, const TinyVector& obj)
+    friend std::ostream& operator<<(std::ostream& os, const TinyVector& obj)
     {
         os << " [ ";
         for (int i = 0; i < size; ++i)
