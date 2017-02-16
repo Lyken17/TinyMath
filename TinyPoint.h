@@ -18,7 +18,7 @@ public:
 
     TinyPoint rotate(double angle);
 
-    // binding for easy to use
+    // binding
     dtype &x = darray[0];
     dtype &y = darray[1];
 };
