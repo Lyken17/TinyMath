@@ -11,10 +11,10 @@
 
 typedef unsigned int colorInt;
 
-class TinyColor : TinyVector<colorInt, 4> {
+class TinyColor : public TinyVector<colorInt, 4> {
     // TODO: add common colors
-
-    // initialize by 3/4 nums
+public:
+    // initialize by 3 or 4 numbers
     TinyColor(colorInt R, colorInt G, colorInt B, colorInt A = 0xff);
 
     colorInt RGB2NUM();
@@ -23,7 +23,7 @@ class TinyColor : TinyVector<colorInt, 4> {
 
     static std::tuple<colorInt, colorInt, colorInt> NUM2RGB(colorInt color);
 
-
+    // Common color libraries
     static const colorInt   RED   = 0xffff0000,
                             GREEN = 0xff00ff00,
                             BLUE  = 0xff0000ff;
